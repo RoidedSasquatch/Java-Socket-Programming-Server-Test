@@ -78,4 +78,11 @@ public class Server {
             Logger.getAnonymousLogger().log(Level.SEVERE, e.getMessage());
         }
     }
+    
+    public void close() throws IOException {
+        server.close();
+        client.close();
+        os.close();
+        is.close();
+    }
 }

@@ -5,6 +5,7 @@
 package com.algonquin.lab10;
 
 import com.algonquin.lab10.server.Server;
+import java.io.IOException;
 
 /**
  *
@@ -12,7 +13,7 @@ import com.algonquin.lab10.server.Server;
  */
 public class Run {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         Server server = new Server();
         boolean connected = false;
         boolean isFinished = false;
@@ -37,6 +38,6 @@ public class Run {
                 isFinished = true;
             }
         }
-        
+        server.close();
     }
 }
